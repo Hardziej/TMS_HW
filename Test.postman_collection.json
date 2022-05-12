@@ -1,0 +1,425 @@
+{
+	"info": {
+		"_postman_id": "802439ed-c634-40ae-b286-09af1138d420",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Do Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "arina@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Arina",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/doregister",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"doregister"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\": \"gg33g@test.com\",\r\n\"name\": \"ASDF674\",\r\n\"tasks\": [11, 12, 15],\r\n\"companies\":[20],\r\n\"hobby\": \"Хобби\",\r\n\"adres\": \"Адрес\",\r\n\"name1\": \"Имя 1\",\r\n\"surname1\": \"Фамилия 1\",\r\n\"fathername1\": \"Отчество 1\",\r\n\"cat\": \"Кошечка\",\r\n\"dog\": \"Собачка\",\r\n\"parrot\": \"Попугайчик\",\r\n\"cavy\": \"Морская свинка\",\r\n\"hamster\": \"Хомячок\",\r\n\"squirrel\": \"Белка\",\r\n\"phone\": \"Телефон\",\r\n\"inn\": \"546677654323\",\r\n\"gender\": \"Пол\",\r\n\"birthday\": \"07.07.2077\",\r\n\"date_start\": \"08.08.2077\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createuser",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Avatar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": "/D:/Картинки/Картинки для рабочего стола/koshka_astronavt_kosmos_252853_1920x1080.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/addavatar?email=gg33g@test.com",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"addavatar"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "gg33g@test.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Avatar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/deleteavatar?email=gg33g@test.com",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"deleteavatar"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "gg33g@test.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/deleteuser?email=gg33g@test.com",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"deleteuser"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "gg33g@test.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/getuser?email=gg33g@test.com",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"getuser"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "gg33g@test.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task - task_id: \"160/163/164\"",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\": \"gg33g@test.com\",\r\n\"email_owner\": \"gg33g@test.com\",\r\n\"task\": \"Задача\",\r\n\"task_id\": \"162\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/deletetask",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"deletetask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Full",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/getuserfull?email=gg33g@test.com",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"getuserfull"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "gg33g@test.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User One Field",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\": \"gg33g@test.com\",\r\n\"field\": \"dog\",\r\n\"value\": \"Бобик\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/useronefield",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"useronefield"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createtask?email=gg33g@test.com&task_title=Задача&task_description=Описание задачи&email_owner=gg33g@test.com&email_assign=gg33g@test.com",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createtask"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "gg33g@test.com"
+						},
+						{
+							"key": "task_title",
+							"value": "Задача"
+						},
+						{
+							"key": "task_description",
+							"value": "Описание задачи"
+						},
+						{
+							"key": "email_owner",
+							"value": "gg33g@test.com"
+						},
+						{
+							"key": "email_assign",
+							"value": "gg33g@test.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\": \"gg33g@test.com\",\r\n\"company_title\": \"Ромашки_синие\"\r\n\"company_description\": \"Компания для проверки запроса\"\r\n\"email_owner\": \"gg33g@test.com\",\r\n\"email_assign\": \"gg33g@test.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/createcompany",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"createcompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Company",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://users.bugred.ru/tasks/rest/getcompany?id_company=133",
+					"protocol": "http",
+					"host": [
+						"users",
+						"bugred",
+						"ru"
+					],
+					"path": [
+						"tasks",
+						"rest",
+						"getcompany"
+					],
+					"query": [
+						{
+							"key": "id_company",
+							"value": "133"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
